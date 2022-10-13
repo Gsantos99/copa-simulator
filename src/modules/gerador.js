@@ -2,7 +2,9 @@
 
 export {Copa} 
 
-console.log('Gerador.js on ')
+
+
+
 
 class Copa {
   geraGrupos() {

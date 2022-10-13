@@ -66,7 +66,7 @@ nav  {
   height: 2px;
   background: rgb(255, 255, 255);
   margin: 8px;
-  
+  cursor: pointer;
 }
 
 header {
@@ -80,13 +80,60 @@ main {
 }
 
 .container {
-  max-width: 640px;
+  max-width: 750px;
+  height: auto;
   margin: 100px auto;
-  
   background: #fff;
   padding: 20px;
   border-radius: 10px;
 }
 
+.logo {
+  margin-right: 20px;
+}
 
+button {
+  font-size: 1rem;
+  margin: 15px auto;
+}
 
+/*Media queries*/
+
+@media (max-width: 999px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+  }
+  
+  .nav-list li {
+    margin-left: 0;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: block;
+    float: left;
+  }
+
+  .logo {
+   margin: 0 auto;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+}
