@@ -97,6 +97,13 @@ button {
   margin: 15px auto;
 }
 
+
+.grupoA, h2 {
+  margin-top: 5px;
+  margin-bottom: 5px  ;
+}
+
+
 /*Media queries*/
 
 @media (max-width: 999px) {
