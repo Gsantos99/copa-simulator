@@ -1,16 +1,16 @@
-
-export { Copa }
+const paginas = require('./paginas')
+export { Copa, starCopa }
 
 // Seleção de botões da página 
 const url = 'https://estagio.geopostenergy.com/WorldCup/GetAllTeams'
 const starCopa = document.querySelector('.startCopa');
 
+// Seleção dos grupos 
+const grupoAresultado =  document.querySelector('.grupoAresultado');
 
 
-// Função que inicia a Copa 
-starCopa.addEventListener('click', ()=>{
-  console.log("Cliquei para gerar copa!")
-})
+
+
 
 class Copa {
   // 1º Consumo de Api
@@ -48,10 +48,10 @@ class Copa {
     const nomeSelecao = Object.values(selecoes)
     
     // Selecione de maneira aleatória um elemento dentro do array de objetos 
-    let selecaoAleatoria = this.getSelecaoAleatoria(nomeSelecao)
+    let selecaoAleatoria = () => { return this.getSelecaoAleatoria(nomeSelecao)}
    
    // Separar seleções em grupos
-   console.log(selecaoAleatoria);
+   console.log(selecaoAleatoria());
 
   // Grupos (arrays)
 
@@ -64,7 +64,11 @@ class Copa {
     
    for(let i = 0; i < nomeSelecao.length; i++) {
     if(grupoA.length >= 0 && grupoA.length < 4 ) {
-      
+     
+      let selecao = document.createElement('li');
+       selecao = selecaoAleatoria()
+      //  console.log(selecao) 
+
     }
    }
    

@@ -1,6 +1,4 @@
-
-
-
+const geradores = require('./gerador')
 
 // Menu 
 class MobileNavbar {
